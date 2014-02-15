@@ -95,6 +95,9 @@ public class MirrorClient {
     // http://b/6909300.
     callbackUrl = callbackUrl.replace("appspot.com", "Appspot.com");
 
+    callbackUrl = "https://mirrornotifications.appspot.com/forward?url=" + callbackUrl;
+    LOG.info("subscription callback " + callbackUrl);
+
     Subscription subscription = new Subscription();
     // Alternatively, subscribe to "locations"
     subscription.setCollection(collection);
