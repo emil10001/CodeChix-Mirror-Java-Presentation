@@ -1,8 +1,6 @@
 I'm giving a few talks on the Mirror API for Google Glass, and I needed to organize some thoughts on it. I figured that writing a blog post would a good way to do that. 
 
-Here is the slide deck for the shared content of my Mirror talks:
-
-<iframe src="https://docs.google.com/presentation/d/1FzGVnzhBLFaaz4wkxTvkzWiC8mpZuM2bMVgqMPZCp98/embed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+Here is the slide deck for the shared content of my Mirror talks: (I'll give out the link at the talk)
 
 Since I don't want to miss anything, I'm going to follow the structure of the slides in this post. What I am not going to do, is be consistent with languages. I'll be bouncing between Java and JavaScript, with bits of Android flavored Java thrown in for good measure. It really just comes down to what I have code for right now in which language. The goal here is to discuss the concepts, and to get a good high-level view.
 
@@ -44,9 +42,7 @@ Further reading in the [Quick Start](https://developers.google.com/glass/develop
 
 The timeline is the collection of Cards that you have on Glass, starting from the latest, and going back into the past. It also includes pinned cards, and things happening 'in the future', provided by Google Now.
 
-Here's a video explanation from the Glass Team:
-
-<iframe width="560" height="315" src="//www.youtube.com/embed/qfs5d00TNrA" frameborder="0" allowfullscreen></iframe>
+[Here's a video explanation from the Glass Team](http://youtu.be/qfs5d00TNrA).
 
 ### Why a Timeline?
 
