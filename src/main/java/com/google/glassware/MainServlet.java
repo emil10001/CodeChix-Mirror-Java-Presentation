@@ -120,10 +120,10 @@ public class MainServlet extends HttpServlet {
       // Triggers an audible tone when the timeline item is received
       timelineItem.setNotification(new NotificationConfig().setLevel("DEFAULT"));
 
-      // Add 'delete' menu item
-      List<MenuItem> menuItemList = new ArrayList<MenuItem>();
-      menuItemList.add(new MenuItem().setAction("DELETE"));
-      timelineItem.setMenuItems(menuItemList);
+//      // Add 'delete' menu item
+//      List<MenuItem> menuItemList = new ArrayList<MenuItem>();
+//      menuItemList.add(new MenuItem().setAction("DELETE"));
+//      timelineItem.setMenuItems(menuItemList);
 
         if (req.getParameter("imageUrl") != null) {
         // Attach an image, if we have one
@@ -144,8 +144,8 @@ public class MainServlet extends HttpServlet {
       List<MenuItem> menuItemList = new ArrayList<MenuItem>();
       menuItemList.add(new MenuItem().setAction("OPEN_URI").setPayload(
           "https://www.google.com/search?q=cat+maintenance+tips"));
-      timelineItem.setMenuItems(menuItemList);
-        menuItemList.add(new MenuItem().setAction("DELETE"));
+//      menuItemList.add(new MenuItem().setAction("DELETE"));
+//      timelineItem.setMenuItems(menuItemList);
 
       // Triggers an audible tone when the timeline item is received
       timelineItem.setNotification(new NotificationConfig().setLevel("DEFAULT"));
@@ -163,7 +163,7 @@ public class MainServlet extends HttpServlet {
       // Built in actions
       menuItemList.add(new MenuItem().setAction("REPLY"));
       menuItemList.add(new MenuItem().setAction("READ_ALOUD"));
-      menuItemList.add(new MenuItem().setAction("DELETE"));
+//      menuItemList.add(new MenuItem().setAction("DELETE"));
 
       // And custom actions
       List<MenuValue> menuValues = new ArrayList<MenuValue>();
@@ -178,34 +178,34 @@ public class MainServlet extends HttpServlet {
 
       message = "A timeline item with actions has been inserted.";
 
-    } else if (req.getParameter("operation").equals("insertItemWithLocation")) {
-        LOG.fine("Inserting Timeline Item");
-        TimelineItem timelineItem = new TimelineItem();
-        timelineItem.setText("Let's meet at a16z!");
-
-        List<MenuItem> menuItemList = new ArrayList<MenuItem>();
-
-        // Location
-        Location loc = new Location();
-        loc.setAddress("2865 Sand Hill Road \n" +
-                "Suite 101 \n" +
-                "Menlo Park, CA 94025");
-        loc.setLatitude(37.4196331);
-        loc.setLongitude(-122.214092);
-        loc.setDisplayName("Andreessen Horowitz offices");
-
-        // Built in actions
-        menuItemList.add(new MenuItem().setAction("NAVIGATE"));
-        menuItemList.add(new MenuItem().setAction("READ_ALOUD"));
-        menuItemList.add(new MenuItem().setAction("DELETE"));
-
-        timelineItem.setMenuItems(menuItemList);
-        timelineItem.setLocation(loc);
-        timelineItem.setNotification(new NotificationConfig().setLevel("DEFAULT"));
-
-        MirrorClient.insertTimelineItem(credential, timelineItem);
-
-        message = "A timeline item with a location has been inserted.";
+//    } else if (req.getParameter("operation").equals("insertItemWithLocation")) {
+//        LOG.fine("Inserting Timeline Item");
+//        TimelineItem timelineItem = new TimelineItem();
+//        timelineItem.setText("Let's meet at a16z!");
+//
+//        List<MenuItem> menuItemList = new ArrayList<MenuItem>();
+//
+//        // Location
+//        Location loc = new Location();
+//        loc.setAddress("2865 Sand Hill Road \n" +
+//                "Suite 101 \n" +
+//                "Menlo Park, CA 94025");
+//        loc.setLatitude(37.4196331);
+//        loc.setLongitude(-122.214092);
+//        loc.setDisplayName("Andreessen Horowitz offices");
+//
+//        // Built in actions
+//        menuItemList.add(new MenuItem().setAction("NAVIGATE"));
+//        menuItemList.add(new MenuItem().setAction("READ_ALOUD"));
+//        menuItemList.add(new MenuItem().setAction("DELETE"));
+//
+//        timelineItem.setMenuItems(menuItemList);
+//        timelineItem.setLocation(loc);
+//        timelineItem.setNotification(new NotificationConfig().setLevel("DEFAULT"));
+//
+//        MirrorClient.insertTimelineItem(credential, timelineItem);
+//
+//        message = "A timeline item with a location has been inserted.";
 
     } else if (req.getParameter("operation").equals("insertContact")) {
       if (req.getParameter("iconUrl") == null || req.getParameter("name") == null) {

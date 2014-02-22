@@ -1,7 +1,3 @@
-I'm giving a few talks on the Mirror API for Google Glass, and I needed to organize some thoughts on it. I figured that writing a blog post would a good way to do that. 
-
-Here is the slide deck for the shared content of my Mirror talks: (I'll give out the link at the talk)
-
 Since I don't want to miss anything, I'm going to follow the structure of the slides in this post. What I am not going to do, is be consistent with languages. I'll be bouncing between Java and JavaScript, with bits of Android flavored Java thrown in for good measure. It really just comes down to what I have code for right now in which language. The goal here is to discuss the concepts, and to get a good high-level view.
 
 ## What is the Mirror API?

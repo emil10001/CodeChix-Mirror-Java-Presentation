@@ -196,12 +196,12 @@ limitations under the License.
           Insert a card you can reply to</button>
       </form>
       <hr>
-      <form action="<%= WebUtil.buildUrl(request, "/main") %>" method="post">
-        <input type="hidden" name="operation" value="insertItemWithLocation">
-        <button class="btn btn-block" type="submit">
-                Insert a card with a location</button>
-      </form>
-      <hr>
+      <%--<form action="<%= WebUtil.buildUrl(request, "/main") %>" method="post">--%>
+        <%--<input type="hidden" name="operation" value="insertItemWithLocation">--%>
+        <%--<button class="btn btn-block" type="submit">--%>
+                <%--Insert a card with a location</button>--%>
+      <%--</form>--%>
+      <%--<hr>--%>
       <form action="<%= WebUtil.buildUrl(request, "/main") %>" method="post">
         <input type="hidden" name="operation" value="insertItemAllUsers">
         <button class="btn btn-block" type="submit">

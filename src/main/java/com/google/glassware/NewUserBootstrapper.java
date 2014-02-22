@@ -73,8 +73,9 @@ public class NewUserBootstrapper {
     TimelineItem timelineItem = new TimelineItem();
     timelineItem.setText("Welcome to the Glass Java Quick Start");
     timelineItem.setNotification(new NotificationConfig().setLevel("DEFAULT"));
-    List<MenuItem> menuItemList = new ArrayList<MenuItem>();
-    menuItemList.add(new MenuItem().setAction("DELETE"));
+//    List<MenuItem> menuItemList = new ArrayList<MenuItem>();
+//    menuItemList.add(new MenuItem().setAction("DELETE"));
+//    timelineItem.setMenuItems(menuItemList);
     TimelineItem insertedItem = MirrorClient.insertTimelineItem(credential, timelineItem);
     LOG.info("Bootstrapper inserted welcome message " + insertedItem.getId() + " for user "
         + userId);
