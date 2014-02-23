@@ -16,6 +16,7 @@
 package com.google.glassware;
 
 import com.google.api.client.auth.oauth2.TokenResponseException;
+import org.mortbay.log.Log;
 
 import java.io.IOException;
 import java.util.logging.Logger;
@@ -41,6 +42,8 @@ public class ReauthFilter implements Filter {
   @Override
   public void doFilter(ServletRequest request, ServletResponse response,
       FilterChain filterChain) throws IOException, ServletException {
+
+//    Log.info("running the ReauthFilter");
 
     // Skip this filter if somehow we have a request that's not HTTP
     if (response instanceof HttpServletResponse && request instanceof HttpServletRequest) {

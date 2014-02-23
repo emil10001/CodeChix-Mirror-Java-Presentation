@@ -15,6 +15,8 @@
  */
 package com.google.glassware;
 
+import org.mortbay.log.Log;
+
 import java.io.IOException;
 import java.util.logging.Logger;
 
@@ -38,7 +40,10 @@ public class AuthFilter implements Filter {
 
   public void doFilter(ServletRequest request, ServletResponse response, FilterChain filterChain)
       throws IOException, ServletException {
-    if (response instanceof HttpServletResponse && request instanceof HttpServletRequest) {
+
+//      Log.info("running the AuthFilter");
+
+      if (response instanceof HttpServletResponse && request instanceof HttpServletRequest) {
       HttpServletRequest httpRequest = (HttpServletRequest) request;
       HttpServletResponse httpResponse = (HttpServletResponse) response;
 
