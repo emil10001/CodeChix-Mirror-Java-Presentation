@@ -103,6 +103,29 @@ limitations under the License.
               <th>HTML</th>
               <td><%= StringEscapeUtils.escapeHtml4(timelineItem.getHtml()) %></td>
             </tr>
+            <%--<tr>--%>
+                <%--<th>MenuItems</th>--%>
+                <%--<% if (null != timelineItem.getMenuItems() && timelineItem.getMenuItems().size() > 0) {--%>
+                <%--%>--%>
+                <%--<td><%=--%>
+                    <%--StringEscapeUtils.escapeHtml4(timelineItem.getMenuItems().get(0).getAction())--%>
+                <%--%></td>--%>
+                <%--<% } else { %>--%>
+                <%--<td>none</td>--%>
+                <%--<% } %>--%>
+            <%--</tr>--%>
+            <%--<tr>--%>
+                <%--<th>Location</th>--%>
+                <%--<% if (null != timelineItem.getLocation()) {--%>
+                <%--%>--%>
+                <%--<td><%=--%>
+                <%--StringEscapeUtils.escapeHtml4(timelineItem.getLocation().getAddress())--%>
+                <%--%></td>--%>
+                <%--<% } else { %>--%>
+                <%--<td>none</td>--%>
+                <%--<% } %>--%>
+            <%--</tr>--%>
+
             <tr>
               <th>Attachments</th>
               <td>
